@@ -1,0 +1,64 @@
+html,body {
+  margin:0;
+  padding:0;
+  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  margin-top:5px;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#main {
+  width:700px;
+  margin:50% auto;
+  margin-top:50px;
+  margin-bottom:20px;
+  color:#FFF;
+  border-radius:20px;
+  border-color:#FFF;
+  border-style:solid;
+  padding:20px;
+  box-shadow:0 0 20px #FFF;
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+hr {
+  margin-top:20px;
+}
+
+input,label {
+  display:block;
+  margin:10px;
+}
+
+label {
+  margin-left:0;
+  text-align:right;
+}
+
+#controls > div {
+  float:left;
+}
+
+#controls {
+  height:100px;
+  margin-top:20px;
+  margin-bottom:10px;
+}
+
+#controls a {
+  margin:10px;
+}
+
+#preset {
+  margin-top:10px;
+}
+
+.cont-right {
+  margin-left:20px;
+}
