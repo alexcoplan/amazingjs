@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>amazing.js</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="amazing.js"></script>
+  <script>
+  $(function() {
+    $(".cont-right input").bind("keyup input paste", function() {
+      amazing[this.id] = parseInt($(this).val()) || 0;
+    });
+    $('#preset a').click(function() {
+      var $t = $(this);
+      if (typeof $t.attr('data-stop') !== "undefined") amazing.stop();
+      else if (!amazing.cont) amazing.start();
+
+      var step = $t.attr('data-step'), delay = $t.attr('data-delay');
+      $('#step').val(step);
+      $('#delay').val(delay);
+      amazing.step = parseInt(step);
+      amazing.delay = parseInt(delay);
+    });
+    amazing();
+  });
+  </script>
+</head>
+<body>
+  <div id="main">
+    <h1>amazing.js</h1>
+    <p>because your page needs colour cycling</p>
+    <hr>
+    <div id="controls">
+      <div class="cont-left">
+        <label for="preset">preset</label>
+        <label for="step">colour step</label>
+        <label for="delay">tick delay</label>
+      </div>
+      <div class="cont-right">
+        <div id="preset">
+          <a data-stop="1">stop</a> |
+          <a data-step="1" data-delay="1">smooth</a> |
+          <a data-step="10" data-delay="1">fast</a> |
+          <a data-step="200" data-delay="200">blocky</a> |
+          <a data-step="40" data-delay="1">seizure</a> |
+          <a data-step="100" data-delay="1">extreme seizure</a>
+        </div>
+        <input type="text" id="step" value="1">
+        <input type="text" id="delay" value="1">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
